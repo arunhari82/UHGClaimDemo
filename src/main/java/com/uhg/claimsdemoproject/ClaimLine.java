@@ -82,6 +82,9 @@ public class ClaimLine implements java.io.Serializable {
 		this.attr2 = attr2;
 	}
 
+	/* This is the custom code added to produce a list */
+	/* to solve the issue #1 */
+
 	public void addProgramCode(java.lang.String code) {
 		if (this.program_code == null) {
 			this.program_code = new java.util.ArrayList<String>();
