@@ -8,19 +8,19 @@ public class ClaimLine implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "Billing Code")
+	@org.kie.api.definition.type.Label("Billing Code")
 	private java.lang.String billing_code;
-	@org.kie.api.definition.type.Label(value = "Program Type")
+	@org.kie.api.definition.type.Label("Program Type")
 	private java.lang.String program_type;
-	@org.kie.api.definition.type.Label(value = "Time Period")
+	@org.kie.api.definition.type.Label("Time Period")
 	private java.lang.String time_period;
-	@org.kie.api.definition.type.Label(value = "Program Code")
+	@org.kie.api.definition.type.Label("Program Code")
 	private java.util.List<java.lang.String> program_code;
-	@org.kie.api.definition.type.Label(value = "Claim Line Identifier")
+	@org.kie.api.definition.type.Label("Claim Line Identifier")
 	private int claimLineId;
-	@org.kie.api.definition.type.Label(value = "Attribute1")
+	@org.kie.api.definition.type.Label("Attribute1")
 	private java.lang.String attr1;
-	@org.kie.api.definition.type.Label(value = "Attribute2")
+	@org.kie.api.definition.type.Label("Attribute2")
 	private java.lang.String attr2;
 
 	public ClaimLine() {
@@ -80,6 +80,16 @@ public class ClaimLine implements java.io.Serializable {
 
 	public void setAttr2(java.lang.String attr2) {
 		this.attr2 = attr2;
+	}
+
+	public void addProgramCode(java.lang.String code) {
+		if (this.program_code == null) {
+			this.program_code = new java.util.ArrayList<String>();
+			this.program_code.add(code);
+		} else {
+			this.program_code.add(code);
+		}
+
 	}
 
 	public ClaimLine(java.lang.String billing_code,
