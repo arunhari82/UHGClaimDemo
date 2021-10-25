@@ -6,12 +6,35 @@ package com.uhg.claimsdemoproject;
 
 public class ParentCode implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public ParentCode() {
-    }
+	@org.kie.api.definition.type.Label(value = "Code")
+	private java.lang.String code;
+	@org.kie.api.definition.type.Label(value = "Code Value")
+	private java.lang.String codeValue;
 
+	public ParentCode() {
+	}
 
+	public java.lang.String getCode() {
+		return this.code;
+	}
 
+	public void setCode(java.lang.String code) {
+		this.code = code;
+	}
+
+	public java.lang.String getCodeValue() {
+		return this.codeValue;
+	}
+
+	public void setCodeValue(java.lang.String codeValue) {
+		this.codeValue = codeValue;
+	}
+
+	public ParentCode(java.lang.String code, java.lang.String codeValue) {
+		this.code = code;
+		this.codeValue = codeValue;
+	}
 
 }
