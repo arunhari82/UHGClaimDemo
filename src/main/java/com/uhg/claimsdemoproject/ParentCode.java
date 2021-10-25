@@ -8,20 +8,12 @@ public class ParentCode implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "Code")
-	private java.lang.String code;
-	@org.kie.api.definition.type.Label(value = "Code Value")
+	@org.kie.api.definition.type.Label("Code Value")
 	private java.lang.String codeValue;
 
+	private java.lang.String codeType;
+
 	public ParentCode() {
-	}
-
-	public java.lang.String getCode() {
-		return this.code;
-	}
-
-	public void setCode(java.lang.String code) {
-		this.code = code;
 	}
 
 	public java.lang.String getCodeValue() {
@@ -32,9 +24,17 @@ public class ParentCode implements java.io.Serializable {
 		this.codeValue = codeValue;
 	}
 
-	public ParentCode(java.lang.String code, java.lang.String codeValue) {
-		this.code = code;
+	public java.lang.String getCodeType() {
+		return this.codeType;
+	}
+
+	public void setCodeType(java.lang.String codeType) {
+		this.codeType = codeType;
+	}
+
+	public ParentCode(java.lang.String codeValue, java.lang.String codeType) {
 		this.codeValue = codeValue;
+		this.codeType = codeType;
 	}
 
 }
