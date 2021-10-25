@@ -14,14 +14,15 @@ public class ClaimLine implements java.io.Serializable {
 	private java.lang.String program_type;
 	@org.kie.api.definition.type.Label("Time Period")
 	private java.lang.String time_period;
-	@org.kie.api.definition.type.Label("Program Code")
-	private java.util.List<java.lang.String> program_code;
 	@org.kie.api.definition.type.Label("Claim Line Identifier")
 	private int claimLineId;
 	@org.kie.api.definition.type.Label("Attribute1")
 	private java.lang.String attr1;
 	@org.kie.api.definition.type.Label("Attribute2")
 	private java.lang.String attr2;
+
+	@org.kie.api.definition.type.Label(value = "Parent Code List")
+	private java.util.List<com.uhg.claimsdemoproject.ParentCode> parent_code_list;
 
 	public ClaimLine() {
 	}
@@ -48,14 +49,6 @@ public class ClaimLine implements java.io.Serializable {
 
 	public void setTime_period(java.lang.String time_period) {
 		this.time_period = time_period;
-	}
-
-	public java.util.List<java.lang.String> getProgram_code() {
-		return this.program_code;
-	}
-
-	public void setProgram_code(java.util.List<java.lang.String> program_code) {
-		this.program_code = program_code;
 	}
 
 	public int getClaimLineId() {
@@ -95,17 +88,30 @@ public class ClaimLine implements java.io.Serializable {
 
 	}
 
-	public ClaimLine(java.lang.String billing_code,
-			java.lang.String program_type, java.lang.String time_period,
-			java.util.List<java.lang.String> program_code, int claimLineId,
-			java.lang.String attr1, java.lang.String attr2) {
+	public java.util.List<com.uhg.claimsdemoproject.ParentCode> getParent_code_list() {
+		return this.parent_code_list;
+	}
+
+	public void setParent_code_list(
+			java.util.List<com.uhg.claimsdemoproject.ParentCode> parent_code_list) {
+		this.parent_code_list = parent_code_list;
+	}
+
+	public ClaimLine(
+			java.lang.String billing_code,
+			java.lang.String program_type,
+			java.lang.String time_period,
+			int claimLineId,
+			java.lang.String attr1,
+			java.lang.String attr2,
+			java.util.List<com.uhg.claimsdemoproject.ParentCode> parent_code_list) {
 		this.billing_code = billing_code;
 		this.program_type = program_type;
 		this.time_period = time_period;
-		this.program_code = program_code;
 		this.claimLineId = claimLineId;
 		this.attr1 = attr1;
 		this.attr2 = attr2;
+		this.parent_code_list = parent_code_list;
 	}
 
 }
