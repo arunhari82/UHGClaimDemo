@@ -380,7 +380,7 @@ $claimLine.setTime_period(&quot;@{Time Period}&quot;);</text>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>OTP</valueString>
+        <valueString>OBOT</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
