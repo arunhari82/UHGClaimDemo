@@ -10,10 +10,6 @@ rule "Row 1 ParentCodeTimePeriodRules"
 		$claim : Claim( $claimLines: claimLineList )
 		$claimLine : ClaimLine(program_type == "OTP") from $claimLines
 	then
-		ParentCode code = new ParentCode();
-		code.setCode("H0020");
-		code.setCodeType("PARENT_CODE");
-		$claimLine.addParentCode(code);
-		$claimLine.setTime_Period("W");
+
 end
 
