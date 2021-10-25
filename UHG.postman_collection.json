@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "f20296f8-3545-4865-a54c-9566f7fc8da0",
+		"name": "UHG",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ExecuteRules",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "kieserver1!",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "kieserver",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"lookup\": \"stateless-session\",\n    \"commands\": [\n       {\n             \"insert\": {\n                \"object\": {\n                    \"com.uhg.claimsdemoproject.Claim\" : {\n                    }\n                },\n                \"out-identifier\": \"\",\n                \"return-object\": false\n             }\n         }\n        {\n            \"fire-all-rules\": {}\n        },\n        {\n            \"get-objects\": {\n                \"out-identifier\": \"objects\"\n            }\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/kie-server/services/rest/server/containers/instances/ClaimsDemoProject_1.0.0-SNAPSHOT",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"instances",
+						"ClaimsDemoProject_1.0.0-SNAPSHOT"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
