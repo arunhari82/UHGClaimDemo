@@ -13,6 +13,9 @@ public class ParentCode implements java.io.Serializable {
 
 	private java.lang.String codeType;
 
+	@org.kie.api.definition.type.Label(value = "Time Period")
+	private java.lang.String timePeriod;
+
 	public ParentCode() {
 	}
 
@@ -32,9 +35,19 @@ public class ParentCode implements java.io.Serializable {
 		this.codeType = codeType;
 	}
 
-	public ParentCode(java.lang.String codeValue, java.lang.String codeType) {
+	public java.lang.String getTimePeriod() {
+		return this.timePeriod;
+	}
+
+	public void setTimePeriod(java.lang.String timePeriod) {
+		this.timePeriod = timePeriod;
+	}
+
+	public ParentCode(java.lang.String codeValue, java.lang.String codeType,
+			java.lang.String timePeriod) {
 		this.codeValue = codeValue;
 		this.codeType = codeType;
+		this.timePeriod = timePeriod;
 	}
 
 }
