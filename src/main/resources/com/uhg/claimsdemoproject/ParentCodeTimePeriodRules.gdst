@@ -55,8 +55,9 @@ $claimLine : ClaimLine(program_type == &quot;@{Program Type}&quot;) from $claimL
           <text>ParentCode code = new ParentCode();
 code.setCodeValue(&quot;@{Parent Code}&quot;);
 code.setCodeType(&quot;@{Code Type}&quot;);
+code.setTimePeriod(&quot;@{Time Period}&quot;);
 $claimLine.addParentCode(code);
-$claimLine.setTime_period(&quot;@{Time Period}&quot;);</text>
+</text>
         </org.drools.workbench.models.datamodel.rule.FreeFormLine>
       </definition>
       <childColumns>
@@ -67,7 +68,7 @@ $claimLine.setTime_period(&quot;@{Time Period}&quot;);</text>
             <isOtherwise>false</isOtherwise>
           </typedDefaultValue>
           <hideColumn>false</hideColumn>
-          <width>115</width>
+          <width>100</width>
           <header>Enriched Claim Line</header>
           <varName>Parent Code</varName>
           <fieldType>Object</fieldType>
