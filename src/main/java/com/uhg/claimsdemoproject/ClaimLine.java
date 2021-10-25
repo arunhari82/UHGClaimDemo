@@ -21,7 +21,7 @@ public class ClaimLine implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Attribute2")
 	private java.lang.String attr2;
 
-	@org.kie.api.definition.type.Label(value = "Parent Code List")
+	@org.kie.api.definition.type.Label("Parent Code List")
 	private java.util.List<com.uhg.claimsdemoproject.ParentCode> parent_code_list;
 
 	public ClaimLine() {
@@ -78,12 +78,12 @@ public class ClaimLine implements java.io.Serializable {
 	/* This is the custom code added to produce a list */
 	/* to solve the issue #1 */
 
-	public void addProgramCode(java.lang.String code) {
-		if (this.program_code == null) {
-			this.program_code = new java.util.ArrayList<String>();
-			this.program_code.add(code);
+	public void addParentCode(com.uhg.claimsdemoproject.ParentCode code) {
+		if (this.parent_code_list == null) {
+			this.parent_code_list = new java.util.ArrayList<com.uhg.claimsdemoproject.ParentCode>();
+			this.parent_code_list.add(code);
 		} else {
-			this.program_code.add(code);
+			this.parent_code_list.add(code);
 		}
 
 	}
