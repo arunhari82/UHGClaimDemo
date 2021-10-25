@@ -17,4 +17,3 @@ rule "Row 1 ParentCodeTimePeriodRules"
 		$claimLine.setTime_Period("W");
 end
 
-
