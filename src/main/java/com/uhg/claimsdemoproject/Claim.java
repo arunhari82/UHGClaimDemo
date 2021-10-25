@@ -6,12 +6,37 @@ package com.uhg.claimsdemoproject;
 
 public class Claim implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Claim() {
-    }
+	@org.kie.api.definition.type.Label("Claim Identifer")
+	private int claimId;
+	@org.kie.api.definition.type.Label("Claim Line List")
+	private java.util.List<com.uhg.claimsdemoproject.ClaimLine> claimLineList;
 
+	public Claim() {
+	}
 
+	public int getClaimId() {
+		return this.claimId;
+	}
 
+	public void setClaimId(int claimId) {
+		this.claimId = claimId;
+	}
+
+	public java.util.List<com.uhg.claimsdemoproject.ClaimLine> getClaimLineList() {
+		return this.claimLineList;
+	}
+
+	public void setClaimLineList(
+			java.util.List<com.uhg.claimsdemoproject.ClaimLine> claimLineList) {
+		this.claimLineList = claimLineList;
+	}
+
+	public Claim(int claimId,
+			java.util.List<com.uhg.claimsdemoproject.ClaimLine> claimLineList) {
+		this.claimId = claimId;
+		this.claimLineList = claimLineList;
+	}
 
 }
