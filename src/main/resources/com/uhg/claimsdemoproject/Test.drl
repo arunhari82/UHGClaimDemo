@@ -13,5 +13,6 @@ rule "Row 1 ParentCodeTimePeriodRules"
 		code.setCodeValue("H0020");
 		code.setCodeType("PARENT_CODE");
 		$claimLine.addParentCode(code);
+		$claimLine.setTime_period("W");
 end
 
