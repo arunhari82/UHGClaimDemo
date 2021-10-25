@@ -7,7 +7,7 @@ import com.uhg.claimsdemoproject.ParentCode;
 rule "Row 1 ParentCodeTimePeriodRules"
 	dialect "mvel"
 	when
-		$claim : Claim( $claimLines : claimLineList )
+		$claim : Claim( $claimLines: claimLineList )
 		$claimLine : ClaimLine(program_type == "OTP") from $claimLines
 	then
 		ParentCode code = new ParentCode();
