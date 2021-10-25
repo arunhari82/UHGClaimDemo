@@ -6,12 +6,93 @@ package com.uhg.claimsdemoproject;
 
 public class ClaimLine implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public ClaimLine() {
-    }
+	@org.kie.api.definition.type.Label(value = "Billing Code")
+	private java.lang.String billing_code;
+	@org.kie.api.definition.type.Label(value = "Program Type")
+	private java.lang.String program_type;
+	@org.kie.api.definition.type.Label(value = "Time Period")
+	private java.lang.String time_period;
+	@org.kie.api.definition.type.Label(value = "Program Code")
+	private java.util.List<java.lang.String> program_code;
+	@org.kie.api.definition.type.Label(value = "Claim Line Identifier")
+	private int claimLineId;
+	@org.kie.api.definition.type.Label(value = "Attribute1")
+	private java.lang.String attr1;
+	@org.kie.api.definition.type.Label(value = "Attribute2")
+	private java.lang.String attr2;
 
+	public ClaimLine() {
+	}
 
+	public java.lang.String getBilling_code() {
+		return this.billing_code;
+	}
 
+	public void setBilling_code(java.lang.String billing_code) {
+		this.billing_code = billing_code;
+	}
+
+	public java.lang.String getProgram_type() {
+		return this.program_type;
+	}
+
+	public void setProgram_type(java.lang.String program_type) {
+		this.program_type = program_type;
+	}
+
+	public java.lang.String getTime_period() {
+		return this.time_period;
+	}
+
+	public void setTime_period(java.lang.String time_period) {
+		this.time_period = time_period;
+	}
+
+	public java.util.List<java.lang.String> getProgram_code() {
+		return this.program_code;
+	}
+
+	public void setProgram_code(java.util.List<java.lang.String> program_code) {
+		this.program_code = program_code;
+	}
+
+	public int getClaimLineId() {
+		return this.claimLineId;
+	}
+
+	public void setClaimLineId(int claimLineId) {
+		this.claimLineId = claimLineId;
+	}
+
+	public java.lang.String getAttr1() {
+		return this.attr1;
+	}
+
+	public void setAttr1(java.lang.String attr1) {
+		this.attr1 = attr1;
+	}
+
+	public java.lang.String getAttr2() {
+		return this.attr2;
+	}
+
+	public void setAttr2(java.lang.String attr2) {
+		this.attr2 = attr2;
+	}
+
+	public ClaimLine(java.lang.String billing_code,
+			java.lang.String program_type, java.lang.String time_period,
+			java.util.List<java.lang.String> program_code, int claimLineId,
+			java.lang.String attr1, java.lang.String attr2) {
+		this.billing_code = billing_code;
+		this.program_type = program_type;
+		this.time_period = time_period;
+		this.program_code = program_code;
+		this.claimLineId = claimLineId;
+		this.attr1 = attr1;
+		this.attr2 = attr2;
+	}
 
 }
