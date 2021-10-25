@@ -52,7 +52,7 @@
       <parameters/>
       <definition>
         <org.drools.workbench.models.datamodel.rule.FreeFormLine>
-          <text>$claimLine : ClaimLine(program_type == &quot;@{Program Type}&quot;) from $claimLineList</text>
+          <text>$claimLine : ClaimLine(program_type == &quot;@{Program Type}&quot;) from $claimLines</text>
         </org.drools.workbench.models.datamodel.rule.FreeFormLine>
       </definition>
       <childColumns>
